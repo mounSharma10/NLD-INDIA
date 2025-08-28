@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLD India</title>
+  <link rel="stylesheet" href="./style.css" />
+  <!-- font osm -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- font osm  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+</head>
+
+<body >
+<nav class="navbar navbar-expand-lg  fixed-top">
+  <div class="container-fluid ]">
+
+    <!-- Logo on the left -->
+    <a class="navbar-brand" href="#">
+      <img src="./logo.png" alt="Logo" class="Navlogo" />
+    </a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu on the right -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto gap-3 align-items-lg-center">
+        <li class="nav-item">
+         <a href="#home" class="nav-link navlinks ">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link navlinks">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#workflow" class="nav-link navlinks">Workflow</a>
+        </li>
+        <li class="nav-item">
+          <a href="#whyUs" class="nav-link navlinks">Why Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#technologies" class="nav-link navlinks">Technologies</a>
+        </li>
+        <li class="nav-item">
+          <a href="#products" class="nav-link navlinks">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="#findUs" class="nav-link navlinks">Find Us</a>
+        </li>
+        <!-- Language Dropdown -->
+        <li class="nav-item dropdown lang-btn">
+          <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-globe globe-icon"></i> Language
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Dutch</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- Home -->
+<section id="home" class="container mb-3 mt-5">
+  <div class="position-relative text-center">  
+    <!-- <h1 class="fw-bold m-0">Simplifying Business Processes</h1>
+    <h3 class="fw-semibold m-0">Building Software Solutions for Your Vision</h3> -->
+    <div id="text-container">
+	<span id="text1"></span>
+	<span id="text2"></span>
+  <svg id="filters">
+	<defs>
+		<filter id="threshold">	
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+</div>
+    <img src="./Mask group.png" alt="Home Banner" class="img-fluid Home-Img rounded-3 shadow-sm" />
+  </div>
+  
+</section>
+  <!-- about us -->
+  <!-- <section class="about-bg p-5">
+    <div class="p-5 d-flex gap-5">
+      <img src="./istockphoto-1146019992-612x612 1.jpg" width="600px" alt="img" />
+      <div class="about-content">
+        <h1 class="about heading mb-3">ABOUT US</h1>
+        <p class="about about-para">
+          At Next Level Development, we craft exceptional software solutions
+          tailored to your unique vision. Our team of passionate developers
+          and designers thrives on collaborating with clients to bring
+          innovative ideas to liWe specialize in building bespoke applications
+          and products, ensuring each creation perfectly aligns with your
+          specific needs and goals.
+        </p>
+        <p class="line">
+          Our mission is to empower businesses through technology, making
+          complex processes simple and efficient.
+        </p>
+      </div>
+    </div>
+  </section> -->
+  <!-- about us -->
+  <section id="about" class="aboutimg p-5">
+      <h1 class="heading text-center text-light pt-4">ABOUT US</h1>
+      <p class=" text-center text-light pb-4">At Next Level Development, we craft exceptional software solutions tailored to your unique <br> vision. Our team of passionate developers and designers thrives on collaborating with clients to <br> bring innovative ideas to liWe specialize in building bespoke applications and products, ensuring each creation perfectly <br> aligns with  your specific needs and goals.</p>
+  </section>
+  <!-- how to work -->
+
+<section id="workflow" class="p-5" >
+  <div class="">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-5 text-center">
+        <img src="./Mask group (1).png" alt="How we work" class="img-fluid rounded-3 shadow-sm" />
+      </div>
+      <div class="col-12 col-md-7">
+        <h1 class="mb-3 heading">How We Work</h1>
+        <p class="about-para">
+          At Next Level Development, we craft exceptional software solutions
+          tailored to your unique vision. Our team of passionate developers
+          and designers thrives on collaborating with clients to bring
+          innovative ideas to life. We specialize in building bespoke applications
+          and products, ensuring each creation perfectly aligns with your
+          specific needs and goals. From initial concept to final launch, we
+          partner with you every step of the way, delivering high-quality,
+          custom software that empowers your business to achieve new heights.
+        </p>
+        <p class="about-para">
+          We offer seamless integration to effortlessly connect your existing
+          systems, creating a unified workflow. Our dynamic dashboards allow
+          you to visualize data in real-time through interactive interfaces,
+          while insightful reports provide comprehensive analysis to support
+          informed decision-making. With process automation, repetitive tasks
+          are eliminated, boosting efficiency across operations. By leveraging
+          the latest technologies, we ensure optimal performance, and our
+          diverse technical expertise enables us to address a wide range of
+          business challenges with confidence and precision.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- Why Choose -->
+  <section id="whyUs" class="whyUsSection d-flex justify-content-center align-items-center flex-column mb-5">
+    <h1 class="p-0 text-center heading ">
+      Why Choose NLD India
+    </h1>
+    <h3 class="p-0 text-center heading ">
+      We are here to simplifying your business processes
+    </h3>
+    <div class="mainbox d-flex justify-content-center mt-5 position-relative">
+      <!-- right -->
+      <div class="card-text-right">
+        <h4 class="text-end">Tailored Software</h4>
+        <p class="text-end">Custom solutions designed to meet your unique business needs</p>
+      </div>
+      <div class=" card-container-right d-flex ">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4"> <i
+              class="fa-solid fa-globe"></i></div>
+          <div class="card"><img
+              src="https://starkcloudglobal.com/hubfs/Desarrollo%20de%20Software%20a%20Medida%20vs.%20Soluciones%20Preconstruidas.webp"
+              alt="" /></div>
+        </div>
+      </div>
+      <!-- left -->
+      <div class="card-text-left" style="top: 370px;">
+        <h4>International Work Environment</h4>
+        <p>A global perspective ensuring innovative and diverse solutions.</p>
+      </div>
+      <div class="card-container-left d-flex" style="top: 250px;">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1705646742193-d0ffd590193b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="">
+          </div>
+        </div>
+      </div>
+      <!-- right -->
+      <div class="card-text-right" style="top: 650px;">
+        <h4 class="text-end">Privately Owned by Industry Experts</h4>
+        <p class="text-end">Guidance and expertise from leaders with in-depth industry -knowledge.</p>
+      </div>
+      <div class="card-container-right d-flex" style="top: 500px;">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4">
+            <i class="fa-solid fa-cog"></i>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1581629735456-87436514ddf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D"
+              alt="">
+          </div>
+        </div>
+      </div>
+      <!-- left -->
+      <div class="card-text-left" style="top:950px;">
+        <h4>Fast Turnaround Time</h4>
+        <p>Swift project completion to keep your business moving forward.</p>
+      </div>
+      <div class="card-container-left d-flex" style="top: 800px;">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4">
+            <i class="fa-solid fa-cog"></i>
+          </div>
+          <div class="card">
+            <img src="https://finerva.com/wp-content/uploads/2023/07/office.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- right -->
+      <div class="card-text-right" style="top: 1250px;">
+        <h4 class="text-end">Dedicated Teams</h4>
+        <p class="text-end">A committed team of professionals focused on your success.</p>
+      </div>
+      <div class="card-container-right d-flex" style="top: 1100px;">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4">
+            <i class="fa-solid fa-cog"></i>
+          </div>
+          <div class="card">
+            <img src="https://static.independent.co.uk/2023/06/21/13/Oktra_Header%20Image_iStock-1434119140.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- left -->
+      <div class="card-text-left" style="top: 1600px;">
+        <h4>Diverse Tech Stack</h4>
+        <p>A wide range of in-house technologies to meet all your demands.</p>
+      </div>
+      <div class="card-container-left d-flex" style="top: 1450px;">
+        <div class="d-flex flex-column align-items-center">
+          <div class="curcle mb-3 d-flex justify-content-center align-items-center fs-4">
+            <i class="fa-solid fa-cog"></i>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- SERVICES WE USE -->
+  <section class="p-5 w-full" id="technologies">
+    <h1 class="about heading mb- text-center">SERVICES WE USE</h1>
+    <div class="languages d-flex gap-5 justify-content-center mt-5">
+      <img src="./angular.png" height="60px" alt="">
+      <img src="./js.png" height="60px" alt="">
+      <img src="./react.png" height="60px" alt="">
+      <img src="./react native.png" height="60px" alt="">
+      <img src="./mysql.png" height="60px" alt="">
+      <img src="./postgresql.png" height="60px" alt="">
+      <img src="./mongodb.png" height="60px" alt="">
+      <img src="./typescript.png" height="60px" alt="">
+      <img src="./node js.png" height="60px" alt="">
+      <img src="./python.png" height="60px" alt="">
+      <img src="./nextjs.png" height="60px" alt="">
+      <img src="./sql.png" height="60px" alt="">
+    </div>
+  </section>
+ <!-- PRODUCTS -->
+<section id="products" class="products-section p-5 w-full pb-0">
+  <h1 class="about heading text-center">PRODUCTS</h1>
+  <div class="intro px-5">
+    <h2>Bring Agility to Your Enterprise</h2>
+    <p>
+      At Next Level Development, we craft exceptional software solutions tailored to your unique vision. 
+      Our team of passionate developers and designers thrives on collaborating with clients to bring innovative 
+      ideas to life. We specialize in building bespoke applications and products, ensuring each creation perfectly 
+      aligns with your specific needs and goals.
+    </p>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="content-area">
+    <div class="slide-container row">
+      
+      <!-- Slide 1 -->
+      <div class="slide active col-12 p-5">
+        <div class="slide-text col-md-3 col-sm-3">
+       
+          <div class="slide-content">
+            <h3>Docuvibs</h3>
+            <p>Exceptional software solutions tailored to your unique vision.</p>
+            <h3>Docuvibs</h3>
+            <p>Comprehensive point-of-sale system with intuitive design and adaptive features.</p>
+            <h3>Docuvibs</h3>
+            <p>Comprehensive point-of-sale system with intuitive design and adaptive features.</p>
+            
+          </div>
+        </div>
+        <div class="slide-image col-md-9 col-sm-9">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80" alt="Shipping containers">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide col-12 p-5">
+        <div class="slide-text col-md-3 col-sm-3">
+
+          <div class="slide-content">
+            <h3>Fluentia</h3>
+            <p>Helping businesses scale efficiently with insights and automation.</p>
+            <h3>Fluentia</h3>
+            <p>Growth-focused platforms designed to accelerate business performance.</p>
+            <h3>Fluentia</h3>
+            <p>Growth-focused platforms designed to accelerate business performance.</p>
+          </div>
+        </div>
+        <div class="slide-image col-md-9 col-sm-9">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Business growth">
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide col-12 p-5">
+        <div class="slide-text col-md-3 col-sm-3">
+       
+          <div class="slide-content">
+            <h3>Posis</h3>
+            <p>Bringing your product ideas to life with cutting-edge technology.</p>
+            <h3>Posis</h3>
+            <p>From concept to deployment with user-centered design.</p>
+            <h3>Posis</h3>
+            <p>From concept to deployment with user-centered design.</p>
+          </div>
+        </div>
+        <div class="slide-image col-md-9 col-sm-9">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Collaboration">
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide col-12 p-5">
+        <div class="slide-text col-md-3 col-sm-3 ">
+         
+          <div class="slide-content">
+            <h3>Orion</h3>
+            <p>Enterprise solutions that integrate seamlessly and scale effortlessly.</p>
+            <h3>Orion</h3>
+            <p>Built for complex challenges with elegant, efficient, and scalable approaches.</p>
+            <h3>Orion</h3>
+            <p>Built for complex challenges with elegant, efficient, and scalable approaches.</p>
+          </div>
+        </div>
+        <div class="slide-image col-md-9 col-sm-9">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Tech integration">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM LOGOS -->
+  <div class="bottom-logos">
+    <div class="logo-item" data-slide="0"><img src="./docuvibe (1) 2.png" alt="Docuvibs"></div>
+    <div class="logo-item" data-slide="1"><img src="./fluentia 1.png" alt="Fluentia"></div>
+    <div class="logo-item" data-slide="2"><img src="./posis 2.png" alt="Posis"></div>
+    <div class="logo-item" data-slide="3"><img src="./oms 3.png" alt="Orion"></div>
+  </div>
+</section>
+
+<section class="products-section-mobile">
+        <h1 class="heading">PRODUCTS</h1>
+        
+        <div class="intro">
+            <h2>Bring Agility to Your Enterprise</h2>
+            <p>
+                At Next Level Development, we craft exceptional software solutions tailored to your unique vision. 
+                Our team of passionate developers and designers thrives on collaborating with clients to bring innovative 
+                ideas to life. We specialize in building bespoke applications and products, ensuring each creation perfectly 
+                aligns with your specific needs and goals.
+            </p>
+        </div>
+
+        <div class="content-area">
+            <div class="slide-container">
+                
+                <!-- Slide 1 - Docuvibs -->
+                <div class="slide active">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80" alt="Shipping containers">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Docuvibs</h3>
+                        <p>Exceptional software solutions tailored to your unique vision.</p>
+                        <p>Comprehensive point-of-sale system with intuitive design and adaptive features.</p>
+                        <p>Comprehensive point-of-sale system with intuitive design and adaptive features.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Fluentia -->
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Business growth">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Fluentia</h3>
+                        <p>Helping businesses scale efficiently with insights and automation.</p>
+                        <p>Growth-focused platforms designed to accelerate business performance.</p>
+                        <p>Growth-focused platforms designed to accelerate business performance.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - Posis -->
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Collaboration">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Posis</h3>
+                        <p>Bringing your product ideas to life with cutting-edge technology.</p>
+                        <p>From concept to deployment with user-centered design.</p>
+                        <p>From concept to deployment with user-centered design.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 - Orion -->
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Tech integration">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Orion</h3>
+                        <p>Enterprise solutions that integrate seamlessly and scale effortlessly.</p>
+                        <p>Built for complex challenges with elegant, efficient, and scalable approaches.</p>
+                        <p>Built for complex challenges with elegant, efficient, and scalable approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Logos -->
+        <div class="bottom-logos">
+            <div class="logo-item active" data-slide="0">
+                <img src="./docuvibe (1) 2.png" alt="Docuvibs" onerror="this.style.display='none'">
+            </div>
+            <div class="logo-item" data-slide="1">
+                <img src="./fluentia 1.png" alt="Fluentia" onerror="this.style.display='none'">
+            </div>
+            <div class="logo-item" data-slide="2">
+                <img src="./posis 2.png" alt="Posis" onerror="this.style.display='none'">
+            </div>
+            <div class="logo-item" data-slide="3">
+                <img src="./oms 3.png" alt="Orion" onerror="this.style.display='none'">
+            </div>
+        </div>
+</section>
+
+
+  <!-- location -->
+  <section class="p-5" id="findUs">
+    <h1 class="p-0 text-center heading ">LOCATIONS</h1>
+    <div class="p-5 d-flex justify-content-between">
+      <div class="loacationCard p-4 text-center">
+        <i class="fa-solid fa-phone fs-4 mb-2"></i>
+        <h6>CONTACT US</h6>
+        <p class="m-0">At Next Level Development, we craft exceptional </p>
+        <h6>+31 103214218</h6>
+      </div>
+      <div class="loacationCard p-4 text-center">
+        <i class="fa-solid fa-house fs-4 mb-2"></i>
+        <h6>VISIT US</h6>
+        <p class="m-0">At Next Level Development, we craft exceptional </p>
+        <h6>CHANDIGARH ZIRAKPUR</h6>
+      </div>
+      <div class="loacationCard p-4 text-center">
+        <i class="fa-solid fa-envelope fs-4 mb-2"></i>
+        <h6>MAIL US</h6>
+        <p class="m-0">At Next Level Development, we craft exceptional </p>
+        <h6>info@nldinternational.com</h6>
+      </div>
+
+    </div>
+    <div class="map px-5">
+      <h1 class="p-0 text-center heading ">Need to find us? Click here for our office.</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5772.624708905146!2d76.8222733018238!3d30.65020975239414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390febcbcc1f69f5%3A0x93bb7894ef7ab84a!2sNLD%20India%20Software%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1755686194860!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapadded"></iframe>
+    </div>
+  </section>
+   <footer class="footer-custom text-white py-5">
+        <div class="container">
+          
+            <div class="row g-5 mb-5">
+               
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./logo.png" alt="" height="90px">
+                    </div>
+                    <p class="brand-tagline">
+                        Next Level Development - Transforming ideas into exceptional digital experiences with cutting-edge technology and innovative solutions.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="footer-heading text-light">Company</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#home" class="footer-link">Home</a></li>
+                                <li class="mb-2"><a href="#about" class="footer-link">About Us</a></li>
+                                <li class="mb-2"><a href="#workflow" class="footer-link">workflow</a></li>
+                                <li class="mb-2"><a href="#whyUs" class="footer-link">Why Us</a></li>
+                                <li class="mb-2"><a href="#products" class="footer-link">Products</a></li>
+                                <li class="mb-2"><a href="#technologies" class="footer-link">Technologies</a></li>
+                                <li class="mb-2"><a href="#findUs" class="footer-link">Find Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="footer-heading text-light">Solutions</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#web-dev" class="footer-link">Web Development</a></li>
+                                <li class="mb-2"><a href="#mobile" class="footer-link">Mobile Apps</a></li>
+                                <li class="mb-2"><a href="#consulting" class="footer-link">Consulting</a></li>
+                                <li class="mb-2"><a href="#support" class="footer-link">Support</a></li>
+                                <li class="mb-2"><a href="#training" class="footer-link">Training</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading text-light ">Get In Touch</h5>
+                    
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                        <div class="contact-text">
+                            SCO 40, First Floor, Royale Estate Complex,<br>
+                            Near Oxford Street, Zirakpur,<br>
+                            Punjab 140603, India
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill contact-icon"></i>
+                        <div class="contact-text clickable">hello@nldevelopment.com</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="bi bi-telephone-fill contact-icon"></i>
+                        <div class="contact-text clickable">+91 12345-67890</div>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-3 justify-content-lg-end">
+                        <a href="#" class="social-link">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                           <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        © 2025 Next Level Development International.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Crafted with  by <span class="highlight">NLD India Software Pvt Limited</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
