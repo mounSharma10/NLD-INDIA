@@ -586,7 +586,7 @@ body {
   font-weight: 500;
 }
 
-/*  */
+
 
 #text-container {
   position: absolute;
@@ -632,7 +632,7 @@ body {
   }
   #text-container {
     position: absolute;
-    top: 10%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
