@@ -1,68 +1,50 @@
 const slides = document.querySelectorAll(".slide");
+const slidesMobile = document.querySelectorAll(".slide-mobile");
 const logoItems = document.querySelectorAll(".logo-item");
+const logoItemsMobile = document.querySelectorAll(".logo-item-mobile");
 let currentSlide = 0;
-let slideInterval = 6000;
-let slideTimer;
 
 function showSlide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  logoItems.forEach((item) => item.classList.remove("active"));
+  slides.forEach((slide) => slide?.classList.remove("active"));
+  slidesMobile.forEach((slide) => slide?.classList.remove("active"));
+  logoItems.forEach((item) => item?.classList.remove("active"));
+  logoItemsMobile.forEach((item) => item?.classList.remove("active"));
 
-  slides[index].classList.add("active");
-  logoItems[index].classList.add("active");
+  slides[index]?.classList.add("active");
+  slidesMobile[index]?.classList.add("active");
+  logoItems[index]?.classList.add("active");
+  logoItemsMobile[index]?.classList.add("active");
 
   currentSlide = index;
 }
 
-// Auto slide loop
-function startSlideShow() {
-  // only show first slide if it's the start
-
-  slideTimer = setInterval(() => {
-    const nextSlide = currentSlide + 1;
-    if (nextSlide > 4) {
-      showSlide(0); // loop back
-    } else {
-      showSlide(nextSlide);
-    }
-  }, slideInterval);
-}
-
-function resetSlideShow() {
-  clearInterval(slideTimer);
-  startSlideShow();
-}
-
-// ✅ run immediately so first slide appears on page load
-document.addEventListener("DOMContentLoaded", () => {
-  showSlide(0);
-  startSlideShow();
-});
-
-// Start when page loads
-// startSlideShow();
+showSlide(currentSlide);
 
 logoItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     showSlide(index);
-    resetSlideShow();
+  });
+});
+logoItemsMobile.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    showSlide(index);
   });
 });
 
-// init
-// showSlide(currentSlide);
-startSlideShow();
-
+setInterval(() => {
+  const nextSlide = (currentSlide + 1) % slides.length;
+  showSlide(nextSlide);
+}, 6000);
 
 // nav
-const sections = document.querySelectorAll("section"); // your sections (id: home, about, etc.)
+const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
   let current = "";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80; // adjust for navbar height
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 80;
     const sectionHeight = section.clientHeight;
 
     if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
@@ -70,7 +52,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
       link.classList.add("active");
@@ -78,24 +60,22 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
 // added js text animation
 
 const elts = {
-	text1: document.getElementById("text1"),
-	text2: document.getElementById("text2")
+  text1: document.getElementById("text1"),
+  text2: document.getElementById("text2"),
 };
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-	"Simplifying Business Processes",
-	"Building Software Solutions for Your Vision"
-	
+  "Simplifying Business Processes",
+  "Building Software Solutions for Your Vision",
 ];
 
 // Controls the speed of morphing.
 const morphTime = 1;
-const cooldownTime = 0.50;
+const cooldownTime = 0.5;
 
 let textIndex = texts.length - 1;
 let time = new Date();
@@ -106,63 +86,60 @@ elts.text1.textContent = texts[textIndex % texts.length];
 elts.text2.textContent = texts[(textIndex + 1) % texts.length];
 
 function doMorph() {
-	morph -= cooldown;
-	cooldown = 0;
-	
-	let fraction = morph / morphTime;
-	
-	if (fraction > 1) {
-		cooldown = cooldownTime;
-		fraction = 1;
-	}
-	
-	setMorph(fraction);
+  morph -= cooldown;
+  cooldown = 0;
+
+  let fraction = morph / morphTime;
+
+  if (fraction > 1) {
+    cooldown = cooldownTime;
+    fraction = 1;
+  }
+
+  setMorph(fraction);
 }
 
-
 function setMorph(fraction) {
+  elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+  elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
 
-	
-	elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-	
-	fraction = 1 - fraction;
-	elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-	elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-	
-	elts.text1.textContent = texts[textIndex % texts.length];
-	elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+  fraction = 1 - fraction;
+  elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+  elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+  elts.text1.textContent = texts[textIndex % texts.length];
+  elts.text2.textContent = texts[(textIndex + 1) % texts.length];
 }
 
 function doCooldown() {
-	morph = 0;
-	
-	elts.text2.style.filter = "";
-	elts.text2.style.opacity = "100%";
-	
-	elts.text1.style.filter = "";
-	elts.text1.style.opacity = "0%";
+  morph = 0;
+
+  elts.text2.style.filter = "";
+  elts.text2.style.opacity = "100%";
+
+  elts.text1.style.filter = "";
+  elts.text1.style.opacity = "0%";
 }
 
 function animate() {
-	requestAnimationFrame(animate);
-	
-	let newTime = new Date();
-	let shouldIncrementIndex = cooldown > 0;
-	let dt = (newTime - time) / 1500;
-	time = newTime;
-	
-	cooldown -= dt;
-	
-	if (cooldown <= 0) {
-		if (shouldIncrementIndex) {
-			textIndex++;
-		}
-		
-		doMorph();
-	} else {
-		doCooldown();
-	}
+  requestAnimationFrame(animate);
+
+  let newTime = new Date();
+  let shouldIncrementIndex = cooldown > 0;
+  let dt = (newTime - time) / 1500;
+  time = newTime;
+
+  cooldown -= dt;
+
+  if (cooldown <= 0) {
+    if (shouldIncrementIndex) {
+      textIndex++;
+    }
+
+    doMorph();
+  } else {
+    doCooldown();
+  }
 }
 
 animate();

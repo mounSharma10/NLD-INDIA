@@ -16,27 +16,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-@media (min-width: 769px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030;
-    background: #fff; 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
-  }
 
-
-}
-
-/* On mobile keep it normal */
-@media (max-width: 768px) {
-  .navbar {
-    position: relative; /* or static */
-    box-shadow: none;   /* optional, remove shadow on mobile */
-  }
-}
 p {
   color: var(--text-light);
 }
@@ -48,99 +28,63 @@ body {
 }
 
 /* NAVIGATION */
-.navbar{
+.navbar {
   background-color: #fff;
-
+  transition: all 0.4s ease;
 }
 
-.Navlogo {
-  height: 50px;
-  max-width: 100%;
+.navbar.scrolled {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  background-color: #ffffffee;
+  backdrop-filter: blur(6px);
 }
+
 
 .navlinks {
+  position: relative;
   color: var(--text-color);
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navlinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navlinks:hover::after,
+.navlinks.active::after {
+  width: 100%;
+}
+.Navlogo {
+  height: 50px;       
+  width: auto;       
+  max-width: 150px;   
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-right: 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
   transition: all 0.3s ease;
-  font-size: 1rem;
+  border-radius: 12px;
 }
 
-.navlinks:hover,
-.navlinks.active {
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--button-color);
-}
-
-.globe-icon {
-  color: var(--primary-color);
-}
-
-.lang-btn {
-  background-color: #fff;
-  border: 2px solid var(--primary-color);
-  color: var(--text-color);
-  transition: 0.3s ease;
-  font-size: 0.9rem;
-  padding: 6px 14px;
-  border-radius: 25px;
-  white-space: nowrap;
-}
-
-.hamburger {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  .navbar-toggler{
-    font-size: 0.50rem;
-  }
-  .navbar{
-  background:none;
-
-}
-
-  .nav-links-container {
-    display: none; 
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .nav-links-container.show {
-    display: flex;
-  }
-  .lang-desktop {
-    display: none;
-  }
-  .lang-mobile {
-    display: inline-block;
-  }
-}
-
-@media (max-width: 768px) {
-  .navItems {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  .Navlogo {
-    height: 45px;
-  }
-  .navlinks {
-    font-size: 0.95rem;
-  }
-  .lang-btn {
-    font-size: 0.85rem;
-    padding: 5px 12px;
-  }
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* HOME */
@@ -746,13 +690,13 @@ body {
             height: 100%;
         }
 
-        .slide {
+        .slide-mobile  {
             display: none;
             padding: 20px;
             animation: slideIn 0.5s ease-out;
         }
 
-        .slide.active {
+        .slide-mobile.active {
             display: block;
         }
 
@@ -808,7 +752,7 @@ body {
             margin-bottom: 0;
         }
 
-        /* Navigation dots */
+     
         .slide-navigation {
             display: flex;
             justify-content: center;
@@ -847,7 +791,7 @@ body {
             flex-wrap: wrap;
         }
 
-        .logo-item {
+        .logo-item-mobile {
             cursor: pointer;
             opacity: 0.4;
             transition: all 0.3s ease;
@@ -862,14 +806,14 @@ body {
             justify-content: center;
         }
 
-        .logo-item:hover, .logo-item.active {
+        .logo-item-mobile:hover, .logo-item-mobile.active {
             opacity: 1;
             transform: translateY(-2px);
             border-color: var(--primary-color);
             box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
         }
 
-        .logo-item img {
+        .logo-item-mobile img {
             max-height: 35px;
             max-width: 60px;
             object-fit: contain;
@@ -927,7 +871,6 @@ body {
             border-radius: 20px;
         }
 
-        /* Swipe indicator */
         .swipe-hint {
             text-align: center;
             padding: 10px;
